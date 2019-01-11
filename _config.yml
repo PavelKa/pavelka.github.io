@@ -21,7 +21,7 @@ navigation:                  # show navigation links in the header
 
 
 icons:                       # show icons in the header, for all possible icons see http://fontawesome.io/icons/
-  envelope: "mailto:kahle@kahle.cz
+  envelope: "mailto:kahle@kahle.cz"
   github: "https://github.com/PavelKa/blog"
   rss: "/blog/feed.xml"
 
