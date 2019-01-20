@@ -1,4 +1,3 @@
-# Howto Linux CLI
 ## Scan image to pdf
 ```console
 scanimage --resolution 300  --format tiff >xxx.tif
