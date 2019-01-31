@@ -3,3 +3,9 @@
 scanimage --resolution 300  --format tiff >xxx.tif
 convert xxx.tif /home/pavel/Dropbox/fileName-01.pdf
 ```
+### Scan image to pdf in 1 command
+```console
+scanimage -p --resolution 600 --mode Gray   -x 215.9 -y 279.4 | pnmtops -imageheight 11 -imagewidth 8.5 | ps2pdf - output.pdf
+```
+
+    
