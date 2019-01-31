@@ -1,0 +1,22 @@
+## Certificates
+### Get site certificates  
+```console
+ echo | openssl s_client -connect services.gradle.org:443  -showcerts  2>/dev/null| sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p' -e  '/i:/ p' -e '/s:/ p'
+```
+
+### Split site certificates to pem files by certificate  
+```console
+ echo | openssl s_client -connect services.gradle.org:443  -showcerts  2>/dev/null| sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p' -e  '/i:/ p' -e '/s:/ p' |awk 'split_after==1{n++;split_after=0} /-----END CERTIFICATE-----/ {split_after=1}  {if(length($0) > 0) print > "cert" n ".pem"}'
+```
+
+### Rename pem files in to certificate common name  
+```console
+for cert in *.pem; do newname=$(openssl x509 -noout -subject -in $cert |grep -Po 'CN=\K([a-zA-Z0-9_\-\.]+)' ).pem; mv $cert $newname; done
+```
+
+### Import pem to java cacert keystore in Windows 
+```console
+keytool -import -trustcacerts -keystore c:\bin\Java\jdk1.8.0_102\jre\lib\security\cacerts  -storepass changeit -alias <cert-alias> -import -file <pem-file-name>
+```
+
+ 
