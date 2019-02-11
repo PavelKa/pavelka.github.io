@@ -7,7 +7,7 @@ convert xxx.tif /home/pavel/Dropbox/fileName-01.pdf
 ```console
 scanimage -p --resolution 600 --mode Gray   -x 215.9 -y 279.4 | pnmtops -imageheight 11 -imagewidth 8.5 | ps2pdf - output.pdf
 ```
-### Copy fiel to remote host using ssh
+### Copy file to remote host using ssh
 ```console
 scp SOA-30-01-2019.csv  pavel@hostname:/mnt/gluster/DEV1/earepository/import/
 ```
