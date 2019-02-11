@@ -1,4 +1,16 @@
 ## Certificates
+
+### Verify site certificates  
+```console
+ openssl s_client -showcerts -connect puma.dev1.equabank.loc:443 -servername puma.dev1.equabank.loc
+```
+
+### Verify site certificates - using CA trustore   
+```console
+ openssl s_client -showcerts -connect puma.dev1.equabank.loc:443 -servername puma.dev1.equabank.loc -CAfile equabank-PDC-CA.pem
+```
+
+
 ### Get site certificates  
 ```console
  echo | openssl s_client -connect services.gradle.org:443  -showcerts  2>/dev/null| sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p' -e  '/i:/ p' -e '/s:/ p'
@@ -20,3 +32,9 @@ keytool -import -trustcacerts -keystore c:\bin\Java\jdk1.8.0_102\jre\lib\securit
 ```
 
  
+
+## Apply CA to curl 
+```console
+export CURL_CA_BUNDLE=../CA.pem
+```
+  
