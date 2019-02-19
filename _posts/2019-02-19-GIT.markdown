@@ -1,0 +1,12 @@
+## GIT commands
+
+### Set remote repository URL  
+```console
+ git remote add origin http://git-server/repository.git
+```
+
+### Change remote repository URL  
+```console
+ git remote set-url origin http://git-server/repository.git
+```
+
