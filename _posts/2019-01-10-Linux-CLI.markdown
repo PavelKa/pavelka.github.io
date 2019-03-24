@@ -1,7 +1,7 @@
 ## Scan image to pdf
 ```console
 scanimage --resolution 300  --format tiff >xxx.tif
-convert xxx.tif /home/pavel/Dropbox/fileName-01.pdf
+convert xxx.tif /tmp/fileName-01.pdf
 ```
 ### Scan image to pdf in 1 command
 ```console
@@ -9,5 +9,5 @@ scanimage -p --resolution 600 --mode Gray   -x 215.9 -y 279.4 | pnmtops -imagehe
 ```
 ### Copy file to remote host using ssh
 ```console
-scp SOA-30-01-2019.csv  pavel@hostname:/mnt/gluster/DEV1/earepository/import/
+scp localfile.csv  pavel@hostname:/tmp/
 ```
