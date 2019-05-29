@@ -7,7 +7,7 @@
 
 ### Verify site certificates - using CA trustore   
 ```console
- openssl s_client -showcerts -connect server1.domainxy.com:443 -servername server1.domainxy.com -CAfile equabank-PDC-CA.pem
+ openssl s_client -showcerts -connect server1.domainxy.com:443 -servername server1.domainxy.com -CAfile CA.pem
 ```
 
 
