@@ -11,3 +11,8 @@ scanimage -p --resolution 600 --mode Gray   -x 215.9 -y 279.4 | pnmtops -imagehe
 ```console
 scp localfile.csv  pavel@hostname:/tmp/
 ```
+
+### Scan for computers in network
+```console
+sudo nmap -sS -p 22 192.168.1.0/24 | grep "Nmap scan"
+```
