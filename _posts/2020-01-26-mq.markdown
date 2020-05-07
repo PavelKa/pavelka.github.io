@@ -2,6 +2,10 @@
 
 
 ###runmqsc - command to issue MQSC commands to a queue
+```console
+runmqsc $QMANAGER
+```
+
 
 #### Display queues  where depth is greater then ...
 ```console
@@ -9,7 +13,8 @@ dis ql (*) CURDEPTH  WHERE (CURDEPTH GT 10)
 ```
 
 #### Dump and delete all messages in a queue
-capitalize I means delete 
+capitalize I means delete
+capitalize F means ovewrire  
 ```console
-/opt/mqm/bin/dmpmqmsg -I $QUEUE -f /tmp/gs
+/opt/mqm/bin/dmpmqmsg -I $QUEUE -F /tmp/gs
 ```
