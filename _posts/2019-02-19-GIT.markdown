@@ -10,3 +10,14 @@
  git remote set-url origin http://git-server/repository.git
 ```
 
+### Checkout remote branch as local
+If -B is given, <new_branch> is created if it doesn’t exist; otherwise, it is reset. This is the transactional equivalent of
+Specifying -b causes a new branch to be created as if git-branc were called and then checked out. 
+```console
+ git  checkout -b release/202109-rel-ocp4 origin/release/202109-rel-ocp4
+```
+### Checkout push branch to remote under different name
+git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME> 
+```console
+  git push origin refs/heads/release/xy:feature/ab
+```
