@@ -21,3 +21,21 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
 ```console
   git push origin refs/heads/release/xy:feature/ab
 ```
+
+### Create local branch from current branch and push remotely
+```console
+  git checkout -b release/r1
+  git push -u origin release/r1
+```
+### Rebase -- add all commits from branch to current branch 
+ -f -history was change - force required
+ -i -interactive
+ --rebase-merges
+ -u -set-upstream
+```console
+  rebase -i --rebase-merges  develop
+  git push -u origin release/r1 -f
+```
+
+ 
+  
