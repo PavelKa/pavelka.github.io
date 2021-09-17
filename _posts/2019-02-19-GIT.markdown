@@ -27,7 +27,7 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
   git checkout -b release/r1
   git push -u origin release/r1
 ```
-### Rebase -- add all commits from branch to current branch 
+### Rebase -- add all commits from branch to the current branch 
  -f -history was change - force required
  -i -interactive
  --rebase-merges
@@ -37,5 +37,11 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
   git push -u origin release/r1 -f
 ```
 
+ ### Rewrite last commit
+```console
+  git add *
+  git commit --amend -m "last commit comment"
+  git push -u origin feature/2 -f
+```
  
   
