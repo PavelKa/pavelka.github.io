@@ -49,4 +49,9 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
   git push -u origin feature/2 -f
 ```
  
+ ### Show what was dded and will be commited
+```console
+  git diff --cached
+```
+ 
   
