@@ -16,7 +16,7 @@ Specifying -b causes a new branch to be created as if git-branc were called and 
 ```console
  git  checkout -b release/202109-rel-ocp4 origin/release/202109-rel-ocp4
 ```
-### Checkout push branch to remote under different name
+### Checkout and push branch to remote under different name
 git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME> 
 ```console
   git push origin refs/heads/release/xy:feature/ab
@@ -27,6 +27,11 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
   git checkout -b release/r1
   git push -u origin release/r1
 ```
+ ### Create local branch from remove
+```console
+  git checkout -b develop origin/develop
+```
+ 
 ### Rebase -- add all commits from branch to the current branch 
  -f -history was change - force required
  -i -interactive
