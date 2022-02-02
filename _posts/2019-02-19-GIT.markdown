@@ -27,7 +27,7 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
   git checkout -b release/r1
   git push -u origin release/r1
 ```
- ### Create local branch from remove
+ ### Create local branch from remote
 ```console
   git checkout -b develop origin/develop
 ```
