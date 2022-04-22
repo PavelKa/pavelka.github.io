@@ -1,0 +1,4 @@
+## ssh -> query elk > gzip > unzip
+```console
+ssh  pavel@server 'curl -XGET "http://localhost:9200/elektrika/_search?scroll=1m&size=1&filter_path=_scroll_id,hits.hits._source"  | gzip -c' | gunzip > x.txt
+```
