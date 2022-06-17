@@ -37,4 +37,16 @@ keytool -import -trustcacerts -keystore c:\bin\Java\jdk1.8.0_102\jre\lib\securit
 ```console
 export CURL_CA_BUNDLE=../CA.pem
 ```
+
+
+## Add ca CA to system trusted CA
+```console
+sudo cp *.pem /etc/pki/ca-trust/source/anchors/
+sudo update-ca-trust
+# usefull when docker installed
+sudo systemctl restart docker
+# daemon reload may be also required
+sudo systemctl daemon-reload
+
+```
   
