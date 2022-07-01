@@ -31,6 +31,12 @@ for cert in *.pem; do newname=$(openssl x509 -noout -subject -in $cert |grep -Po
 keytool -import -trustcacerts -keystore c:\bin\Java\jdk1.8.0_102\jre\lib\security\cacerts  -storepass changeit -alias <cert-alias> -import -file <pem-file-name>
 ```
 
+
+### List all installed CA certs
+```console
+awk -v cmd='openssl x509 -noout -subject' '/BEGIN/{close(cmd)};{print | cmd}' < /etc/ssl/certs/ca-certificates.crt
+```
+
  
 
 ## Apply CA to curl 
