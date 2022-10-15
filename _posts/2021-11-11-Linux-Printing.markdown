@@ -10,3 +10,15 @@ cupsenable HP_LaserJet_Pro_MFP_M127fn
 ```console
 cupsenable HP_LaserJet_Pro_MFP_M127fn
 ```
+### Print documents
+```console
+lpr *
+```
+### Printers status
+```console
+lpstat -t
+```
+### Print not completed jobs
+```console
+lpstat -W not-completed | head
+```

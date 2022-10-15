@@ -7,6 +7,11 @@ convert xxx.tif /tmp/fileName-01.pdf
 ```console
 scanimage -p --resolution 600 --mode Gray   -x 215.9 -y 279.4 | pnmtops -imageheight 11 -imagewidth 8.5 | ps2pdf - output.pdf
 ```
+### Lists last 3 pdf in a directory, copy 1st page from a pdf and copies the page to the output  directory  
+```console
+ls *.pdf -tr | tail -n 3 | while read -r a; do pdftk $a cat 1 output ~/Dropbox/Ucetnictvi/2022/kahle/03/pf/$a; done
+```
+
 ### Copy file to remote host using ssh
 ```console
 scp localfile.csv  pavel@hostname:/tmp/
