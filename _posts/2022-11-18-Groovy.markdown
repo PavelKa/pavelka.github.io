@@ -1,0 +1,4 @@
+## How to serialize groovy object to groovy code 
+```groovy
+  [[a: [x: 1]], [b: [y: 2]]].inspect()=='[[\'a\':[\'x\':1]], [\'b\':[\'y\':2]]]' 
+```
