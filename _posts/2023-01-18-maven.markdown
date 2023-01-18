@@ -1,0 +1,4 @@
+## maven test download artifact  
+```bash
+  mvn dependency:get -DgroupId=cz.kahle.maven -DartifactId=apache-camel-swagger-plugin -Dversion=1.0.7 -Dpackaging=jar -Dtransitive=false 
+```
