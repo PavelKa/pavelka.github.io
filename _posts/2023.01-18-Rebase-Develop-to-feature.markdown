@@ -23,7 +23,7 @@ git commit -m "Committing changes before rebase"
 Now, you can rebase develop onto feature using force-with-lease:
 
 ``` Copy code
-git rebase --force-with-lease develop
+git rebase  develop
 ```
 This will apply the changes from the develop branch onto the feature branch, rewriting the commit history of the feature branch to include the changes from develop.
 
