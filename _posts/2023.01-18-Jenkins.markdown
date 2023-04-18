@@ -1,0 +1,5 @@
+### Clean jenkins jobs queue
+Run in Dashboard > Manage Jenkins > Script Console
+``` console 
+Jenkins.instance.queue.clear()
+```
