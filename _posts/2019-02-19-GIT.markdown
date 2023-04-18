@@ -32,13 +32,13 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
   git checkout -b develop origin/develop
 ```
  
-### Rebase -- add all commits from branch to the current branch 
+### Rebase -- add all commits from a branch to the current branch 
  -f -history was change - force required
  -i -interactive
  --rebase-merges
  -u -set-upstream
 ```console
-  rebase -i --rebase-merges  develop
+  git rebase -i --rebase-merges  develop
   git push -u origin release/r1 -f
 ```
 
@@ -48,10 +48,30 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
   git commit --amend -m "last commit comment"
   git push -u origin feature/2 -f
 ```
- 
+
+### Show what was changed in working directory
+```console
+  git diff --name-only
+```
+
  ### Show what was added and will be commited
 ```console
   git diff --cached
 ```
- 
-  
+### Git adds (stages) all changes
+```console
+git add -A 
+```
+### git adds (stages) new files and modifications, without deletions (on the current directory and its subdirectories).
+```console
+git add . 
+```
+### git adds (stages) modifications and deletions, without new files
+```console
+git add -u 
+```
+
+
+
+
+
