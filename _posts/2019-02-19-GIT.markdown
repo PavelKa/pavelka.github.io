@@ -46,7 +46,7 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
 ```console
   git add *
   git commit --amend -m "last commit comment"
-  git push -u origin feature/2 -f
+  git push -u origin feature/2 --force-with-lease
 ```
 
 ### Show what was changed in working directory
