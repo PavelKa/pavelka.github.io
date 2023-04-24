@@ -22,3 +22,7 @@ lpstat -t
 ```console
 lpstat -W not-completed | head
 ```
+### Print all pdf documents in curret directory recursive
+```console
+find . -name '*.pdf' -exec lp {} \;
+```
