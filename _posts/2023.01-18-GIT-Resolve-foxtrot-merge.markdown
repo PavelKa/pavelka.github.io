@@ -1,0 +1,9 @@
+git switch develop 
+git reset --hard origin/develop //only if local changes  which can be forgotten exists
+git checkout -b feature/branch-to-merge-changes // create local branch into which conflict branch will be merged
+git merge feature/branch-with-foxtrot // Merge branch feature/branch-with-foxtrot into feature/branch-to-merge-changes
+Manually reslove all and commit all conflicts
+git push origin feature/branch-to-merge-changes 
+Cretae pull request and Merge changes
+
+
