@@ -72,6 +72,11 @@ git add -u
 ```
 
 
+### git log - get  commits
+This Git command displays the commit history from a specific commit (1.6.0) up to the latest commit (HEAD), excluding merge commits. The output is formatted using the --oneline flag, which shows each commit on a single line, along with its hash value and commit message.
 
-
+The output is then piped into the grep command with the regular expression [A-Z]+.-[0-9]+.*, which matches lines containing a sequence of capital letters followed by a hyphen and numbers, optionally followed by any other text. This format may match issue identifiers in project management, such as "JIRA-1234" or "GH-5678".
+```console
+git log 1.6.0..HEAD  --no-merges --oneline  | grep -E '[A-Z]+.-[0-9]+.*'
+```
 
