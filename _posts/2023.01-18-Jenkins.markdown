@@ -3,3 +3,8 @@ Run in Dashboard > Manage Jenkins > Script Console
 ``` console 
 Jenkins.instance.queue.clear()
 ```
+Or from freestyle job - Execute system Groovy script
+``` console 
+import jenkins.model.*
+Jenkins.instance.queue.clear()
+```
