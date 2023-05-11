@@ -29,6 +29,8 @@ Resolve any conflicts that arise during the merge.
 
 Commit the changes and push them to the remote repository:
 ``` console
+git add --all 
+git commit -m "merged conflicts"
 git push origin <merge-branch>
 ```
 Create a pull request for the merge branch and merge the changes:
