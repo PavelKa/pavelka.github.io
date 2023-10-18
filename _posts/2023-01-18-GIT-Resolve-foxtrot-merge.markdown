@@ -41,7 +41,7 @@ Choose the target branch as the base and the merge branch as the compare branch.
 Review the changes and click the "Merge" button to merge the changes into the target branch.
 By following these steps, you should be able to successfully resolve a foxtrot merge in Bitbucket.
 
-```mermaid
+```mermaid!
 gitGraph
     branch develop
     commit id: "1"
@@ -59,14 +59,4 @@ gitGraph
     merge merge-conflict-branch
     checkout develop
     merge branch-to-resolve-conflict
-    
-    
-    
-    
-    
-    
-    
-    
-      
-
 ```
