@@ -60,3 +60,16 @@ gitGraph
     checkout develop
     merge branch-to-resolve-conflict
 ```
+@startmermaid
+pie title Pets adopted by volunteers
+"Dogs" : 386
+"Cats" : 85
+"Rats" : 35
+@endmermaid
+
+```mermaid!
+piedfdf title Pets adopted by volunteers
+  "Dogs" : 386
+  "Cats" : 85
+  "Rats" : 35
+```
