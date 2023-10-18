@@ -4,6 +4,7 @@ The target branch, also known as the base branch, is the branch that you want to
 If you are already on the target branch, skip this step.
 ``` console
 git switch <target-branch>
+git pull
 ``` 
 
 Reset the local branch to match the remote branch:
