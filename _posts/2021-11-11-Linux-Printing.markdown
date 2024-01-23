@@ -26,3 +26,7 @@ lpstat -W not-completed | head
 ```console
 find . -name '*.pdf' -exec lp {} \;
 ```
+### Remove all print jobs
+```console
+lprm -
+```
