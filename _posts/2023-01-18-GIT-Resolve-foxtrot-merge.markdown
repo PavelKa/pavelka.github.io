@@ -1,4 +1,15 @@
 ### How to resolve foxtrot merge in bitbucket
+
+#### HOw to prevent foxtrot merge in bitbucket
+``` console
+git switch develop
+git pull
+git switch feature/abc
+git merge develop --no-ff
+git push origin feature/abc
+```
+
+
 The target branch, also known as the base branch, is the branch that you want to merge your changes into.
 
 If you are already on the target branch, skip this step.
